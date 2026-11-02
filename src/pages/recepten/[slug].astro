@@ -36,7 +36,7 @@ const site = Astro.site ?? new URL('https://bbq.hollink.dev');
       <h1 class="page-title">{recipe.data.title}</h1>
       <p class="lead">{recipe.data.description}</p>
       <p class="published">
-        Gepubliceerd op
+        Gepubliceerd op&nbsp;
         <time datetime={recipe.data.publishedAt}>
           {new Intl.DateTimeFormat('nl-NL', {
             dateStyle: 'long',
