@@ -22,9 +22,6 @@ pnpm build    # Statische site in dist/ + smoke test van routes
 pnpm preview  # Gebouwde site lokaal bekijken
 ```
 
-**Let op:** dit starterpakket bevat nog geen `pnpm-lock.yaml`. Draai `pnpm install` en commit de gegenereerde lockfile
-voordat je de GitHub Actions CI gebruikt (`--frozen-lockfile`).
-
 ## Recept publiceren
 
 1. Voeg `src/content/recipes/mijn-recept.json5` toe; de bestandsnaam wordt de slug van `/recepten/mijn-recept/`.
@@ -33,7 +30,6 @@ voordat je de GitHub Actions CI gebruikt (`--frozen-lockfile`).
 3. Plaats eventuele echte foto's in `public/images/recipes/` en voeg bijvoorbeeld
    `image: '/images/recipes/mijn-recept.jpg'` toe.
 4. Push de wijzigingen. Na een succesvolle build publiceer je de inhoud van `dist/` op je statische webserver.
-   Configureer hiervoor apart een deploymentstap.
 
 `JSON5` ondersteunt commentaar, ongequote propertynamen en trailing comma's. Nieuwe recepten mogen geen executable HTML
 of JavaScript bevatten. Instructies staan als losse teksten in `steps`; ingrediënten staan in één of meer groepen:
